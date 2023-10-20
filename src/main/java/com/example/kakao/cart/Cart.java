@@ -16,9 +16,6 @@ public class Cart {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    // 판매자 이름
-    private String sellerName;
-
     // 상품 테이블
     private Product product;
 
@@ -31,9 +28,8 @@ public class Cart {
     // // 예정금액
     // private Integer estimatedPrivce;
 
-    public Cart(Integer id, String sellerName, Product product, Integer quantity, Integer deliveryFee) {
+    public Cart(Integer id, Product product, Integer quantity, Integer deliveryFee) {
         this.id = id;
-        this.sellerName = sellerName;
         this.product = product;
         this.quantity = quantity;
         this.deliveryFee = deliveryFee;
