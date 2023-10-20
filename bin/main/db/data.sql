@@ -1,9 +1,16 @@
 INSERT INTO user_tb (`id`,`email`,`password`,`username`) VALUES ('1', 'ssar@nate.com', '12345678', 'ssar');
 
+
+
+insert into cart_tb(id, DELIVERY_FEE,QUANTITY ,PRODUCT_ID ,USER_ID ) values(1, 3500, 3 ,3,1);
+insert into cart_tb(id, DELIVERY_FEE,QUANTITY ,PRODUCT_ID ,USER_ID ) values(2, 0, 2 ,2,1);
+insert into cart_tb(id, DELIVERY_FEE,QUANTITY ,PRODUCT_ID ,USER_ID ) values(3, 2500, 1 ,1,1);
+
 INSERT INTO product_tb (id,thumbnail,seller,product_title,price, discount_rate) VALUES ('1','/images/1.jpg','[어글어글]', '칠면조&채소 믹스 스팀', '15500','20');
 INSERT INTO product_tb (id,thumbnail,seller,product_title,price, discount_rate) VALUES ('2','/images/2.jpg', '[라호]','접이식 놀이매트 크림베이지 2종', '7630','20');
 INSERT INTO product_tb (id,thumbnail,seller,product_title,price, discount_rate) VALUES ('3','/images/3.jpg','[두부집 효자]', '두부두부두부!', '19800','10');
 INSERT INTO product_tb (id,thumbnail,seller,product_title,price, discount_rate) VALUES ('4','/images/4.jpg','[잡스테이크]', '미국산 냉동 스테이크', '18900',  '20');
+
 -- INSERT INTO product_tb (`id`,`product_name`,`description`,`image`, `price`) VALUES ('5', '[더주] 컷팅말랑장족, 숏다리 100g/300g 외 주전부리 모음 /중독성 최고/마른안주', '', '/images/5.jpg', '5000');
 -- INSERT INTO product_tb (`id`,`product_name`,`description`,`image`, `price`) VALUES ('6', '굳지않는 앙금절편 1,050g 2팩 외 우리쌀떡 모음전', '', '/images/6.jpg', '15900');
 -- INSERT INTO product_tb (`id`,`product_name`,`description`,`image`, `price`) VALUES ('7', 'eoe 이너딜리티 30포, 오렌지맛 고 식이섬유 보충제', '', '/images/7.jpg', '26800');

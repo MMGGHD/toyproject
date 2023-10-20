@@ -1,5 +1,10 @@
 INSERT INTO user_tb (`id`,`email`,`password`,`username`) VALUES ('1', 'ssar@nate.com', '12345678', 'ssar');
 
+
+insert into cart_tb(id, DELIVERY_FEE,QUANTITY ,PRODUCT_ID ,USER_ID ) values(1, 3500, 3 ,3,1);
+insert into cart_tb(id, DELIVERY_FEE,QUANTITY ,PRODUCT_ID ,USER_ID ) values(2, 0, 2 ,2,1);
+insert into cart_tb(id, DELIVERY_FEE,QUANTITY ,PRODUCT_ID ,USER_ID ) values(3, 2500, 1 ,1,1);
+
 INSERT INTO product_tb (id,thumbnail,seller,product_title,price, discount_rate) VALUES ('1','/images/1.jpg','[어글어글]', '칠면조&채소 믹스 스팀', '15500','20');
 INSERT INTO product_tb (id,thumbnail,seller,product_title,price, discount_rate) VALUES ('2','/images/2.jpg', '[라호]','접이식 놀이매트 크림베이지 2종', '7630','20');
 INSERT INTO product_tb (id,thumbnail,seller,product_title,price, discount_rate) VALUES ('3','/images/3.jpg','[두부집 효자]', '두부두부두부!', '19800','10');
