@@ -9,6 +9,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.example.kakao.product.Product;
+import com.example.kakao.user.User;
 
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -28,6 +29,11 @@ public class Order {
     private String sellerName;
 
     // 상품 테이블
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private User user;
+
+    @ManyToOne(fetch = FetchType.LAZY)
     private Product product;
 
     // 수량

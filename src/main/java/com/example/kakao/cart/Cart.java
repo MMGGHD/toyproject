@@ -5,6 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 
 import com.example.kakao.product.Product;
+import com.example.kakao.user.User;
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -16,7 +17,10 @@ public class Cart {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    private User user;
     // 상품 테이블
+    @ManyToOne(fetch = FetchType.LAZY)
     private Product product;
 
     // 수량
