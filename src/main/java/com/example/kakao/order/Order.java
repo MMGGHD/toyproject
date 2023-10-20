@@ -8,6 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.example.kakao.product.Product;
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,4 +19,34 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "order_tb")
 public class Order {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    // 판매자 이름
+    private String sellerName;
+
+    // 상품 테이블
+    private Product product;
+
+    // 수량
+    private Integer quantity;
+
+    // 배송비
+    private Integer deliveryFee;
+
+    // 결재 금액
+    private Integer approvalPrice;
+
+    public Order(Integer id, String sellerName, Product product, Integer quantity, Integer deliveryFee,
+            Integer approvalPrice) {
+        this.id = id;
+        this.sellerName = sellerName;
+        this.product = product;
+        this.quantity = quantity;
+        this.deliveryFee = deliveryFee;
+        this.approvalPrice = approvalPrice;
+    }
+
 }
