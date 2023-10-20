@@ -14,17 +14,18 @@ public class ProductResponse {
         private String thumbnail;
         private String seller;
         private String productTitle;
-        private Integer beforeDiscount;
-        private Integer discountreat;
-        private Integer totalprize;
+        private Integer price;
+        private Integer discountRate;
+        private Integer totalPrice;
 
         public ProductDTO(Product product) {
-            this.thumbnail = thumbnail;
-            this.seller = seller;
-            this.productTitle = productTitle;
-            this.beforeDiscount = beforeDiscount;
-            this.discountreat = discountreat;
-            this.totalprize = totalprize;
+            this.Id = product.getId();
+            this.thumbnail = product.getThumbnail();
+            this.seller = product.getSeller();
+            this.productTitle = product.getProductTitle();
+            this.price = product.getPrice();
+            this.discountRate = product.getDiscountRate();
+            this.totalPrice = product.getPrice() * (100 - product.getDiscountRate()) / 100;
         }
     }
 

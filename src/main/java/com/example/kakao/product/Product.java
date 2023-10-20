@@ -30,18 +30,19 @@ public class Product {
     private String productTitle;
     @Column(length = 500)
     // 할인전 가격
-    private Integer beforeDiscount;
+    private Integer price;
     // 할인율
-    private Integer discountreat;
+    private Integer discountRate;
 
     @Builder
-    public Product(Integer id, String thumbnail, String seller, String productTitle, Integer beforeDiscount,
-            Integer discountreat) {
+    public Product(Integer id, String thumbnail, String seller, String productTitle, Integer price,
+            Integer discountRate) {
         Id = id;
         this.thumbnail = thumbnail;
         this.seller = seller;
         this.productTitle = productTitle;
-        this.beforeDiscount = beforeDiscount;
-        this.discountreat = discountreat;
+        this.price = price;
+        this.discountRate = discountRate;
     }
+
 }
