@@ -18,30 +18,4 @@ import lombok.RequiredArgsConstructor;
 @RestController
 public class OrderRestController {
 
-    private final HttpSession session;
-    private OrderService orderService;
-
-    // 결재하기 - (주문 인서트)
-    @PostMapping("/orders/save")
-    public ResponseEntity<?> save() {
-        User sessionUser = (User) session.getAttribute("sessionUser");
-        if (sessionUser == null) {
-            throw new Exception401("인증되지 않았습니다");
-        }
-        orderService.saveOrder(sessionUser);
-        return ResponseEntity.ok(ApiUtils.success(null));
-    }
-
-    // (기능5) 주문결과 확인
-    @GetMapping("/orders/{id}")
-    public ResponseEntity<?> findById(@PathVariable Integer id) {
-        return null;
-    }
-
-    // (기능4) 주문상품 정보조회 (유저별) - 장바구니 내역 가져오기
-    @GetMapping("/orders")
-    public ResponseEntity<?> findAllByUser() {
-        return null;
-    }
-
 }
