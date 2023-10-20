@@ -1,6 +1,14 @@
 INSERT INTO user_tb (`id`,`email`,`password`,`username`) VALUES ('1', 'ssar@nate.com', '12345678', 'ssar');
 
+INSERT INTO product_tb (id,thumbnail,seller,product_title,before_discount, discountreat) VALUES ('1','/images/1.jpg','[어글어글]', '칠면조&채소 믹스 스팀', '15500','20');
+INSERT INTO product_tb (id,thumbnail,seller,product_title,before_discount, discountreat) VALUES ('2','/images/2.jpg', '[라호]','접이식 놀이매트 크림베이지 2종', '7630','20');
+INSERT INTO product_tb (id,thumbnail,seller,product_title,before_discount, discountreat) VALUES ('3','/images/3.jpg','[삼성]', '삼성전자 JBL JR310 외 어린이용/성인용 헤드셋 3종!', '20000','10');
+INSERT INTO product_tb (id,thumbnail,seller,product_title,before_discount, discountreat) VALUES ('4','/images/4.jpg','[잡스테이크]', '미국산 냉동 스테이크', '18900',  '20');
 
+
+insert into cart_tb(id, DELIVERY_FEE,QUANTITY ,PRODUCT_ID ,USER_ID ) values(1, 3500, 3 ,3,1);
+insert into cart_tb(id, DELIVERY_FEE,QUANTITY ,PRODUCT_ID ,USER_ID ) values(2, 0, 2 ,2,1);
+insert into cart_tb(id, DELIVERY_FEE,QUANTITY ,PRODUCT_ID ,USER_ID ) values(3, 2500, 1 ,1,1);
 -- INSERT INTO product_tb (`id`,`product_name`,`description`,`image`, `price`) VALUES ('1', '기본에 슬라이딩 지퍼백 크리스마스/플라워에디션 에디션 외 주방용품 특가전', '', '/images/1.jpg', '1000');
 -- INSERT INTO product_tb (`id`,`product_name`,`description`,`image`, `price`) VALUES ('2', '[황금약단밤 골드]2022년산 햇밤 칼집밤700g외/군밤용/생율', '', '/images/2.jpg', '2000');
 -- INSERT INTO product_tb (`id`,`product_name`,`description`,`image`, `price`) VALUES ('3', '삼성전자 JBL JR310 외 어린이용/성인용 헤드셋 3종!', '', '/images/3.jpg', '30000');
