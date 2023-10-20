@@ -27,10 +27,10 @@ public class CartResponse {
             this.cartProducts = carts.stream()
                     .map(o -> new CartProductDTO(o.getProduct(), o))
                     .collect(Collectors.toList());
-            this.totalBeforePrice = carts.stream().mapToInt(o -> o.getProduct().getBeforeDiscount() * o.getQuantity())
+            this.totalBeforePrice = carts.stream().mapToInt(o -> o.getProduct().getPrice() * o.getQuantity())
                     .sum();
             this.totalDiscountPrice = carts.stream()
-                    .mapToInt(o -> (o.getProduct().getBeforeDiscount() * (o.getProduct().getDiscountreat()) / 100)
+                    .mapToInt(o -> (o.getProduct().getPrice() * (o.getProduct().getDiscountRate()) / 100)
                             * o.getQuantity())
                     .sum();
             this.totalPrice = totalBeforePrice - totalDiscountPrice;
@@ -58,8 +58,8 @@ public class CartResponse {
                 productTitle = product.getProductTitle();
                 productSeller = product.getSeller();
                 image = product.getThumbnail();
-                beforeDiscount = product.getBeforeDiscount();
-                discountedPrice = product.getBeforeDiscount() * (100 - product.getDiscountreat()) / 100;
+                beforeDiscount = product.getPrice();
+                discountedPrice = product.getPrice() * (100 - product.getDiscountRate()) / 100;
                 this.quentity = cart.getQuantity();
             }
         }
